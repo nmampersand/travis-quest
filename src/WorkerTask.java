@@ -8,6 +8,9 @@ public class WorkerTask implements Runnable {
 
     @Override
     public void run() {
-        System.out.printf("%s says hello #%s\n", Thread.currentThread().getName(), message);
+        System.out.printf("%s says ", Thread.currentThread().getName());
+        System.out.printf("hello #%s", message);
+        System.out.println();
+        //System.out.printf("%s says hello #%s\n", Thread.currentThread().getName(), message);
     }
 }
