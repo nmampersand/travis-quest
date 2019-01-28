@@ -3,6 +3,11 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
+        if (args.length < 2) {
+          System.err.println("Please supply two arguments.");
+          return;
+        }
+
         int messages = Integer.parseInt(args[0]);
         int threads = Integer.parseInt(args[1]);
 
