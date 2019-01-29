@@ -15,8 +15,9 @@ public class AtomicTurnCounter {
     }
 
     public void setNextTurn() {
-        if(count.intValue() < threadCount - 1) {
-            count.set(count.intValue() + 1);
+        int currentCount = count.intValue();
+        if(currentCount < threadCount - 1) {
+            count.set(currentCount + 1);
         } else {
             count.set(0);
         }

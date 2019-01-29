@@ -29,6 +29,7 @@ public class Main {
                 return;
         }
 
+        // TODO: could a pub/sub strategy work better than sync adding messages at start?
         for(int i = 1; i <= messages; i++) {
             queue.add(i);
         }
